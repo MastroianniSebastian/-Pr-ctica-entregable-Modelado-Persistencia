@@ -21,7 +21,8 @@ public abstract class Personaje {
   private Long id;
 
   @Getter
-  @Transient
+  @JoinTable(name = "personaje_x_elemento")
+  @ManyToMany
   private List<ElementoDefensor> elementos;
 
   @Getter @Setter
